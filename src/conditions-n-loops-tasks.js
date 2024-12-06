@@ -197,8 +197,7 @@ function convertNumberToString(numberStr) {
 
   let result = '';
   for (let i = 0; i < numberStr.length; i += 1) {
-    const char = numberStr[i];
-    switch (char) {
+    switch (numberStr[i]) {
       case '0':
         result += (result ? ' ' : '') + wordDecoder['0'];
         break;
