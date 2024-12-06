@@ -178,8 +178,70 @@ function convertToRomanNumerals(num) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  const wordDecoder = {
+    0: 'zero',
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five',
+    6: 'six',
+    7: 'seven',
+    8: 'eight',
+    9: 'nine',
+    '-': 'minus',
+    '.': 'point',
+    ',': 'point',
+  };
+
+  let result = '';
+  for (let i = 0; i < numberStr.length; i += 1) {
+    const char = numberStr[i];
+    switch (char) {
+      case '0':
+        result += (result ? ' ' : '') + wordDecoder['0'];
+        break;
+      case '1':
+        result += (result ? ' ' : '') + wordDecoder['1'];
+        break;
+      case '2':
+        result += (result ? ' ' : '') + wordDecoder['2'];
+        break;
+      case '3':
+        result += (result ? ' ' : '') + wordDecoder['3'];
+        break;
+      case '4':
+        result += (result ? ' ' : '') + wordDecoder['4'];
+        break;
+      case '5':
+        result += (result ? ' ' : '') + wordDecoder['5'];
+        break;
+      case '6':
+        result += (result ? ' ' : '') + wordDecoder['6'];
+        break;
+      case '7':
+        result += (result ? ' ' : '') + wordDecoder['7'];
+        break;
+      case '8':
+        result += (result ? ' ' : '') + wordDecoder['8'];
+        break;
+      case '9':
+        result += (result ? ' ' : '') + wordDecoder['9'];
+        break;
+      case '-':
+        result += (result ? ' ' : '') + wordDecoder['-'];
+        break;
+      case '.':
+      case ',':
+        result += (result ? ' ' : '') + wordDecoder['.'];
+        break;
+      default:
+        break;
+    }
+  }
+
+  return result;
 }
 
 /**
