@@ -179,61 +179,45 @@ function convertToRomanNumerals(num) {
  *  '1950.2'  => 'one nine five zero point two'
  */
 function convertNumberToString(numberStr) {
-  const wordDecoder = {
-    0: 'zero',
-    1: 'one',
-    2: 'two',
-    3: 'three',
-    4: 'four',
-    5: 'five',
-    6: 'six',
-    7: 'seven',
-    8: 'eight',
-    9: 'nine',
-    '-': 'minus',
-    '.': 'point',
-    ',': 'point',
-  };
-
   let result = '';
   for (let i = 0; i < numberStr.length; i += 1) {
     switch (numberStr[i]) {
       case '0':
-        result += (result ? ' ' : '') + wordDecoder['0'];
+        result += `${result ? ' ' : ''}zero`;
         break;
       case '1':
-        result += (result ? ' ' : '') + wordDecoder['1'];
+        result += `${result ? ' ' : ''}one`;
         break;
       case '2':
-        result += (result ? ' ' : '') + wordDecoder['2'];
+        result += `${result ? ' ' : ''}two`;
         break;
       case '3':
-        result += (result ? ' ' : '') + wordDecoder['3'];
+        result += `${result ? ' ' : ''}three`;
         break;
       case '4':
-        result += (result ? ' ' : '') + wordDecoder['4'];
+        result += `${result ? ' ' : ''}four`;
         break;
       case '5':
-        result += (result ? ' ' : '') + wordDecoder['5'];
+        result += `${result ? ' ' : ''}five`;
         break;
       case '6':
-        result += (result ? ' ' : '') + wordDecoder['6'];
+        result += `${result ? ' ' : ''}six`;
         break;
       case '7':
-        result += (result ? ' ' : '') + wordDecoder['7'];
+        result += `${result ? ' ' : ''}seven`;
         break;
       case '8':
-        result += (result ? ' ' : '') + wordDecoder['8'];
+        result += `${result ? ' ' : ''}eight`;
         break;
       case '9':
-        result += (result ? ' ' : '') + wordDecoder['9'];
+        result += `${result ? ' ' : ''}nine`;
         break;
       case '-':
-        result += (result ? ' ' : '') + wordDecoder['-'];
+        result += `${result ? ' ' : ''}minus`;
         break;
       case '.':
       case ',':
-        result += (result ? ' ' : '') + wordDecoder['.'];
+        result += `${result ? ' ' : ''}point`;
         break;
       default:
         break;
